@@ -1,0 +1,30 @@
+﻿version: '3.4'
+
+services:
+    db:
+        image: postgres
+        ports:
+        - "5433:5432"
+        environment:
+            POSTGRES_DB: PaymentsPlanner
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 6163
+            
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: paymentsplanner:latest
+        ports: 
+            - "8080:8080"
+            - "8081:8081" 
+        depends_on:
+            - db
+        environment:
+            DATABASE_URL: "Host=db;Port=5432;Database=PaymentsPlanner;User ID=postgres;Password=6163;"
+            POSTGRES_DB: PaymentsPlanner
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 6163
+            DB_HOST: db
+            DB_PORT: 5432
+            

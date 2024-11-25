@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CamK8GX3wiS5nvsasfrylX+Iq7wR/VAbgZHEj+HxLNA=",
+  "Source": "PaymentsPlanner",
+  "BasePath": "_content/PaymentsPlanner",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
